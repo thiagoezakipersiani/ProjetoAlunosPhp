@@ -50,6 +50,16 @@ class Aluno{
 
 				    $ext = pathinfo($upload['name']);
 					$nome_imagem = $this->nome_completo.'.'.$ext['extension'];
+					$arquivo= explode('.', $upload['name']);
+
+					//echo "<pre>"; print_r($arquivo); echo "</pre>"; exit;  
+
+				if ($arquivo[sizeof($arquivo)-1] !='jpg')
+				 {
+					if ($arquivo[sizeof($arquivo)-1] !='jpeg')
+						if ($arquivo[sizeof($arquivo)-1] !='png')
+						  die  ("arquivo não pode ser enviado, formato invalido");
+                } else{
 					//NÃO ESQUECER DE SETAR PERMIÇÃO NAS PASTA QUE IRÁ RECEBER O UPLOAD.   
 					$caminho_imagem = $DIR .'/'. $nome_imagem;
 					move_uploaded_file($upload['tmp_name'], $caminho_imagem);
@@ -64,7 +74,9 @@ class Aluno{
 			        'arquivo' => $this->arquivo
 		            ]);
 	                //retorna com sucesso
-	                return true;
+	                    return true;
+				}
+
 			} catch (PDOException $ex) {
 				echo '<script type="text/javascript">alert("Error: '.$ex->getMessage().'");</script>';
 			}

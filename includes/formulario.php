@@ -1,4 +1,3 @@
-
 <main>
 	<section>
 		<a href="index.php">
@@ -24,7 +23,7 @@
 		<div class="form-group">
 			<label>Data nascimento</label>
 			<input type="date" class="form-control" name="data_nascimento"
-			value="<? echo '($obAluno->data_nascimento)'?>">		
+			value="<?=date('d/m/Y', strtotime($obAluno->data_nascimento))?>">		
 		</div>
 		<div class="form-group">
 			<label>Renda familiar</label>

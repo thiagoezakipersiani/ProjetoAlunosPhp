@@ -1,5 +1,3 @@
-<? $newData=date('Y/m/d', strtotime($obAluno->data_nascimento));?>
-
 <main>
 	
 	
