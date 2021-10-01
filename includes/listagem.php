@@ -76,6 +76,12 @@ foreach ($alunos as $aluno) {
 			</button>
 		</a>	
 	</section>
-
+	<footer class="mt-3">
+        <ol>
+            <li> <a href="https://www.linkedin.com/in/thiago-ezaki-persiani-786480179/" target="_blank">Linkedin</a></li>
+            <li><a href="mailto:thiagoezaki@gmail.com" target="_blank">Email</a></li>
+            <li><a href="https://github.com/thiagoezakipersiani" target="_blank">GitHub</a></li>
+        </ol>
+     </footer>
 
 </main>
